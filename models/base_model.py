@@ -69,13 +69,13 @@ class BaseModel:
         Return:
             returns a dictionary of all the key values in __dict__
         """
-        my_dict = dict(self.__dict__)
-        my_dict["__class__"] = str(type(self).__name__)
-        my_dict["created_at"] = self.created_at.isoformat()
-        my_dict["updated_at"] = self.updated_at.isoformat()
-        if '_sa_instance_state' in my_dict.keys():
-            del my_dict['_sa_instance_state']
-        return my_dict
+        the_dict = dict(self.__dict__)
+        the_dict["__class__"] = str(type(self).__name__)
+        the_dict["created_at"] = self.created_at.isoformat()
+        the_dict["updated_at"] = self.updated_at.isoformat()
+        if '_sa_instance_state' in the_dict.keys():
+            del the_dict['_sa_instance_state']
+        return the_dict
 
     def delete(self):
         """ delete object
