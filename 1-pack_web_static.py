@@ -7,6 +7,8 @@ import os
 
 @task
 def do_pack():
+    """this function archives the webstatic folder after compressing it"""
+
     time = datetime.now()
     archive = 'web_static_' + time.strftime("%Y%m%d%H%M%S") + '.' + 'tgz'
 
