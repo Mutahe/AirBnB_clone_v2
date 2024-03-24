@@ -24,8 +24,10 @@ def cisfun(text):
     """display “C ” followed by the value of the text variable"""
     return 'C ' + text.replace('_', ' ')
 
-@app.route('/python/,<text>')
-def pyiscool(text):
+@app.route('/python', strict_slashes=False)
+@app.route('/python/<test>', strict_slashes=False)
+
+def pyiscool(text='is cool'):
     """displas python followed by value entered"""
     return 'Python' + text.replace('_',' ')
 
