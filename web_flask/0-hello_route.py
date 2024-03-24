@@ -1,15 +1,13 @@
 #!/usr/bin/python3
-"""used to start a flask web application"""
+""" Starting flask """
 
 from flask import Flask
-
 app = Flask(__name__)
 
-#defines the path for the root URL '/'
 
 @app.route('/', strict_slashes=False)
 def hello_hbnb():
-    """displays 'Hello HBNB!'"""
+    """ prints 'Hello HBNB!' """
     return "Hello HBNB!"
 
 if __name__ == "__main__":
